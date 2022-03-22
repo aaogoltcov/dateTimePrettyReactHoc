@@ -10,6 +10,7 @@ function DateTime(props) {
 }
 
 function Video(props) {
+  const DateTimePrettyComp = DateTimePretty(DateTime);
   return (
       <div className="video">
         <iframe
@@ -19,7 +20,7 @@ function Video(props) {
             allow="autoplay; encrypted-media"
             allowFullScreen
         />
-        <DateTimePretty date={props.date} Component={DateTime} />
+        <DateTimePrettyComp date={props.date} />
       </div>
   )
 }
